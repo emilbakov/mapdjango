@@ -144,6 +144,11 @@ MEDIA_ROOT = BASE_DIR
 
 # leaflet 'SPATIAL_EXTENT': ( max west/y min, max south/x min, max east/y max, max north/x max )
 LEAFLET_CONFIG = {
+    'TILES': [
+        ('Street Map', 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}),
+        ('Topo Map', 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {}),
+        ('Cycle Map', 'https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=973832e433af4285b4e19c5996b41b14', {}),
+    ],
     
     'DEFAULT_CENTER': (42.7339, 25.4858),
     'DEFAULT_ZOOM': 8,
