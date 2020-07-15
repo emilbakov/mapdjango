@@ -1,4 +1,4 @@
-from djgeojson.fields import PolygonField
+from djgeojson.fields import GeometryCollectionField
 from django.db import models
 
 class HuntingSpot(models.Model):
@@ -6,8 +6,8 @@ class HuntingSpot(models.Model):
     title = models.CharField(max_length=256)
     description = models.TextField()
     picture = models.ImageField()
-    geom = PolygonField()
-
+    geom = GeometryCollectionField()
+    
     def __str__(self):
         return self.title
 

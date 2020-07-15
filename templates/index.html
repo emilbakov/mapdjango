@@ -4,7 +4,10 @@
     {% leaflet_js %}
     {% leaflet_css %}
     <style>
-      .leaflet-container { height: 100%; }
+      .leaflet-container { 
+        width:  100vw;
+        height: 750px;
+      }
     </style>
     <script>
       var dataurl = '{% url "data" %}';

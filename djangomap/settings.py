@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -143,5 +144,10 @@ MEDIA_ROOT = BASE_DIR
 
 # leaflet 'SPATIAL_EXTENT': ( max west/y min, max south/x min, max east/y max, max north/x max )
 LEAFLET_CONFIG = {
-    'SPATIAL_EXTENT': (20.0, 40.0, 30.5, 45)
-}
+    
+    'DEFAULT_CENTER': (42.7339, 25.4858),
+    'DEFAULT_ZOOM': 8,
+    'MIN_ZOOM': 3,
+    'MAX_ZOOM': 15,
+    'DEFAULT_PRECISION': 6
+} 
